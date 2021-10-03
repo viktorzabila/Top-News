@@ -1,0 +1,12 @@
+.header {
+  background: "$bg"; }
+  .header__logo {
+    display: flex; }
+  .header__title {
+    font-family: "$font-lato"; }
+  .header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__list {
+    display: flex; }

@@ -1,0 +1,204 @@
+.footer {
+    background: $purple-gradient;
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        padding-top: 80px;
+        @include laptops {
+            flex-wrap: wrap;
+        }
+        @include tablets {
+            padding-top: 50px;
+        }
+        @include phones {
+            padding-top: 20px;
+        }
+    }
+
+    &__info {
+        flex-direction: column;
+        @include tablets {
+            display: flex;
+        }
+        @include l-phones {
+            padding: 0px 20px;
+        }
+    }
+
+    &__logo {
+        margin: 0px 0px 15px 0px;
+        align-items: center;
+        @include l-phones {
+            margin-bottom: 5px;
+        }
+        &-text {
+            margin-top: 0px;
+        }
+    }
+
+    &__img {
+        margin-top: 0px;
+    }
+
+    &__text {
+        margin-top: 0px;
+    }
+
+    &__description {
+        max-width: 275px;
+        width: 100%;
+        line-height: 25px;
+        color: $color-white;
+        letter-spacing: 0.1px;
+        margin: 0px 125px 45px 0px;
+        @include laptops {
+            max-width: 100%;
+            margin: 0px 0px 25px;
+        }
+        @include l-phones {   
+            display: flex;
+        }
+        @include phones {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__columns {
+        display: flex;
+        @include laptops {
+            margin: 0 auto;
+        }
+        @include tablets {
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        @include l-phones {
+            display: block;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: 0.1px;
+        margin-bottom: 5px;
+        color: $color-white;
+        margin-right: 180px;
+        white-space: nowrap;
+        font-family: $font-lato-bold;
+        &_news {
+            @include l-phones {  
+                font-size: 16px;
+            }
+        }
+
+        &_categories {
+            @include l-phones {   
+                font-size: 18px;
+            }
+        }
+        @include l-phones {
+            margin-right: 0px;
+        }
+    }
+
+    &-arr {
+        display: none;
+        transition: 0.3s ease-in-out;
+        @include l-phones {
+            display: block;
+        }
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__item {
+        margin-bottom: 3px;
+    }
+
+    &__link {
+        line-height: 35px;
+        @include l-phones {
+            margin-right: 30px;
+        }
+        &_nowrap {
+            white-space: nowrap;
+        }
+    }
+
+    &__about {
+        @include l-phones {  
+            margin-top: 17px; 
+            padding: 0px 20px;
+        }
+    }
+
+    &__list {
+        @include l-phones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+    }
+
+    &-subfooter {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+        @include l-phones {   
+            padding: 0px 20px;
+        }
+        &__text {
+            letter-spacing: 0.1px;
+            color: $color-white;
+            line-height: 22px;
+            max-width: 580px;
+            width: 100%;
+            font-family: $font-nunito-sans;
+            font-size: 14px;
+            @include tablets {
+                margin-top: 35px;
+            }
+            @include l-phones {
+                margin-top: 0px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.dropdown {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @include l-phones {   
+            padding: 0 20px;
+        }
+    }
+
+    &-content {
+        transition: 0.3s ease-in-out;
+        @include l-phones {
+            display: none;
+        }
+        & a {
+            @include l-phones {
+                display: block;
+                padding: 0 15px
+            }
+        }
+    }
+}
+
+.show {
+    @include l-phones {
+        display: block;
+    }
+}

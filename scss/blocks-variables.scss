@@ -1,0 +1,115 @@
+@import './mixin.scss';
+
+$purple-gradient: linear-gradient(225deg, #4D4D9E 0%, #32325D 100%); 
+$color-white: #ffffff; 
+$color-light-green: #3DCF8E;
+$color-dark-green: #34B079;
+$color-purple: #32325D;
+$color-gray: #333333;
+$font-lato: 'Lato';
+$font-lato-bold: 'Lato Bold';
+$font-lato-black: 'Lato Black';
+$font-nunito-sans: 'Nunito Sans';
+
+.logo {
+    display: flex;
+
+    &__img {
+        margin-top: 15px;
+        @include l-phones {
+            width: 24px;
+            height: 24px;
+            margin-top: 20px;
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__title {
+        font-family: $font-lato-black;
+        font-size: 20px;
+        color: $color-white;
+        line-height: 24px;
+        position: relative;
+        bottom: -7px;
+        margin-left: 10px;
+        @include l-phones {
+            font-size: 12px;
+            margin-left: 5px;
+            bottom: -9px;
+            line-height: 14.4px;
+        }
+    }
+
+    &__subtitle {
+        color: $color-light-green;
+        font-weight: bold;
+        margin-left: 24px;
+        @include l-phones {
+            font-size: 10px;
+            margin-left: 13px;
+            position: relative;
+            top: -3px;
+        }
+    }
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.text {
+    color: $color-gray;
+    line-height: 25px;
+    max-width: 700px;
+    width: 100%;
+    @include l-phones {
+        max-width: 395px;
+    }
+    @include m-phones {
+        max-width: 345px
+    }
+    @include phones {
+        max-width: 290px;
+    }
+}
+
+.title {
+    color: $color-gray;
+    font-family: $font-lato-bold;
+    font-size: 36px;
+    line-height: 45px;
+    @include l-phones {
+        font-size: 27px;
+        line-height: 36px;
+    }
+}
+
+.span {
+    position: relative;
+    color: $color-white;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: $font-lato-bold;
+    letter-spacing: 0.1px;
+    bottom: 45px;
+    right: 105px;
+    left: -85px;
+}
+
+.span:hover {
+    color: $color-dark-green;
+    cursor: pointer;
+}
+
+.hr {
+    display: none;
+    @include l-phones {
+        display: block;
+        background: #E9EEFF;
+        mix-blend-mode: normal;
+        opacity: 0.35;
+    }
+}

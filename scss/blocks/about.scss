@@ -1,0 +1,339 @@
+.about {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__breadcrumbs {
+        display: flex;
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        @include l-phones {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        &_active {
+            color: $color-light-green;
+        }
+
+        &_arrow:before {
+            content: '';
+            border: solid #000;
+            border-width: 0px 1px 1px 0px;
+            display: inline-block;
+            margin-bottom: 2px;
+            margin-left: 8px;
+            margin-right: 10px;
+            padding: 2px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        @include tablets {
+            margin-bottom: 30px;
+        }
+        @include l-phones {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__our {
+        @include l-phones {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__content {
+        border: 1px solid #C0C7D9;
+        box-shadow: 0px 5px 20px rgba(77, 77, 158, 0.21);
+        margin-bottom: 40px;
+        @include tablets {
+            margin-bottom: 30px;
+        }
+        @include l-phones {
+            margin-bottom: 20px;
+        }
+        &-wrapper {
+            display: flex;
+            @include l-phones {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__content:last-child {
+        @include l-phones {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__avatar {
+        font-family: $font-lato-bold;
+        font-size: 22px;
+        line-height: 34px;
+        color: $color-purple;
+        &-img {
+            margin: 20px 80px 15px 75px;
+            @include tablets {
+                margin: 10px 55px 20px 65px;
+            }
+            @include l-phones {
+                margin: 20px 90px 5px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 34px;
+        color: $color-gray;
+        margin-bottom: 15px;
+        @include tablets {
+            margin-bottom: 25px;
+        }
+        @include l-phones {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__btn {
+        background: $color-light-green;
+        width: 180px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 25px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        @include tablets {
+            margin: 0px 0px 0px 20px;
+        }
+        @include l-phones {
+            margin: 0px;
+            width: 230px;
+        }
+        @include phones {
+            width: 230px;
+            margin: 0px;
+        }
+    }
+
+    &__btn:hover {
+        background: $color-dark-green;
+        transition: 0.3s ease-out;
+        color: $color-white ;
+    }
+
+    &__description {
+        margin: 20px 25px 0px 30px;
+        @include tablets {
+            margin-bottom: 20px;
+        }
+        @include l-phones {
+            margin: 15px;
+            max-width: 360px;
+        }
+        @include m-phones {
+            margin: 15px;
+            max-width: 315px;
+        }
+        @include phones {
+            margin: 15px;
+            max-width: 260px;
+        }
+    }
+
+    &__more {
+        color: $color-light-green;
+        cursor: pointer;
+        line-height: 25px;
+        display: inline-block;
+        &.active {
+            display: none;
+        }   
+    }
+
+    &__more:hover {
+        color: $color-dark-green;
+    }
+
+    &__footer {
+        margin-bottom: 20px;
+        text-align: left;
+        max-width: 550px;
+        width: 100%;
+        @include l-phones {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__subfooter {
+        margin-bottom: 60px;
+        @include tablets {
+            margin-bottom: 80px;
+        }
+        @include l-phones {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__column {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 75px;
+        @include laptops {
+            display: none;
+        }
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &__news {
+        color: $color-purple;
+        font-family: $font-lato-bold;
+        font-size: 22px;
+        line-height: 30px;
+        margin: 90px 0px 15px 0px;
+    }
+
+    &__img {
+        transition: 0.3s ease-out;
+    }
+
+    &__img:hover {
+        transform: scale(0.86);
+        cursor: pointer;
+    }
+
+    &__usa {
+        left: -105px
+    }
+
+    &-table {
+        margin-top: 10px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        &__content {
+            display: flex;
+            justify-content: flex-end;
+            background: $color-white;
+            border: 1px solid #D9DCE4;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        &__menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.active {
+                padding-bottom: 150px;
+            }
+        }
+
+        &__title {
+            margin: 17px 60px 17px 80px;
+            font-family: $font-lato-bold;
+            font-size: 14px;
+            color: $color-light-green;
+        }
+
+        &__title:hover {
+            color: $color-dark-green;
+        }
+
+        &__burger {
+            height: 18px;
+            width: 24px;
+            background: url(/img/about/burger.svg) no-repeat center;
+            background-size: contain;
+            &_active {
+                background: url(/img/about/close.svg) no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__oval {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: $color-light-green;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    &__oval:hover {
+        background: $color-dark-green;
+    }
+
+    &__nav {
+        display: none;
+        &.active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        margin-top: 10px;
+        position: relative;
+        top: -150px;
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 17px;
+        font-family: $font-lato-bold;
+        margin-bottom: 20px;
+        margin-left: 47px;
+    }
+
+    &__link {
+        color: $color-light-green;
+        &_active {
+            color: $color-gray;
+        }
+    }
+
+    &__link:hover {
+        color: $color-dark-green;
+    }
+}
+
+.hidden {
+    overflow: hidden;
+    max-height: 275px;
+    cursor: pointer;
+    @include l-phones {
+        max-height: 225px;
+    }
+}
+
+.expand {
+    max-height: 100%;
+    margin-bottom: 25px;
+}
+

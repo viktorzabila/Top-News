@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  color: #000;
+  font-family: "Lato";
+  font-weight: normal; }
+
+body {
+  line-height: 1.42; }
+
+a {
+  transition: 300ms;
+  text-decoration: none;
+  color: #fff; }
+  a:hover {
+    color: #34B079; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+button {
+  cursor: pointer; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @incl; }
